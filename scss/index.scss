@@ -23,22 +23,22 @@ html {
 }
 
 body {
-  font-family: var(--font-family);
   background: var(--pale-blue);
+  font-family: var(--font-family);
   margin: 0;
   padding: 2rem 1rem 0;
 }
 $white: #fff;
 
 .card {
-  width: 320px;
   margin: 0 auto;
+  width: 320px;
 
   &-hero {
     &-img {
+      border-radius: var(--radius) var(--radius) 0 0;
       display: block;
       width: 100%;
-      border-radius: var(--radius) var(--radius) 0 0;
     }
   }
 
@@ -48,20 +48,20 @@ $white: #fff;
     padding: 1.5rem 0;
 
     &-title {
+      color: var(--dark-blue);
       font-size: 1.2rem;
       font-weight: 900;
-      color: var(--dark-blue);
       text-align: center;
     }
 
     &-text {
       color: var(--desaturated-blue);
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-top: 1rem;
+      margin: 0 auto;
       text-align: center;
       width: 245px;
-      margin: 0 auto;
-      margin-top: 1rem;
-      font-weight: 500;
-      font-size: 0.9rem;
     }
   }
 
