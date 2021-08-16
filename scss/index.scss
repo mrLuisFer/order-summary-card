@@ -26,13 +26,34 @@ body {
   background: var(--pale-blue);
   font-family: var(--font-family);
   margin: 0;
-  padding: 2rem 1rem 0;
 }
+
 $white: #fff;
+.main {
+  position: relative;
+  padding: 2rem 1rem 0;
+
+  &::before {
+    background-image: url(/public/images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    @media (min-width: 1000px) {
+      background-image: url(/public/images/pattern-background-desktop.svg);
+    }
+  }
+}
 
 .card {
   margin: 0 auto;
+  position: relative;
   width: 320px;
+  z-index: 2;
 
   &-hero {
     &-img {
