@@ -1,0 +1,76 @@
+:root {
+  font-size: 16px;
+  --font-family: "Red Hat Display", sans-serif;
+  /* ### Primary */
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  /* ### Neutral */
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+  --radius: 10px;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background: var(--pale-blue);
+  margin: 0;
+  padding: 3rem 1rem 0;
+}
+$white: #fff;
+
+.card {
+  width: 320px;
+  margin: 0 auto;
+
+  &-hero {
+    &-img {
+      display: block;
+      width: 100%;
+      border-radius: var(--radius) var(--radius) 0 0;
+    }
+  }
+
+  &-content {
+    background: $white;
+    border-radius: 0 0 var(--radius) var(--radius);
+    padding: 1.5rem 0;
+
+    &-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--dark-blue);
+      text-align: center;
+    }
+
+    &-text {
+      color: var(--desaturated-blue);
+      text-align: center;
+      width: 245px;
+      margin: 0 auto;
+      margin-top: 1rem;
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+  }
+
+  &-player {
+    display: flex;
+    background: var(--very-pale-blue);
+    margin: 0 auto;
+    width: 280px;
+    border-radius: var(--radius);
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+}
