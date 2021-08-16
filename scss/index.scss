@@ -10,6 +10,7 @@
   --desaturated-blue: hsl(224, 23%, 55%);
   --dark-blue: hsl(223, 47%, 23%);
   --radius: 10px;
+  --transition: 0.18s ease;
 }
 
 html {
@@ -50,15 +51,23 @@ $white: #fff;
 }
 
 .card {
+  border-radius: var(--radius);
+  box-shadow: 0 5px 20px 0 hsla(224, 23%, 55%, 0.522);
   margin: 0 auto;
   position: relative;
+  transition: box-shadow var(--transition);
   width: 320px;
   z-index: 2;
+
+  &:hover {
+    box-shadow: 0 5px 20px 0 hsla(224, 23%, 55%, 0.822);
+  }
 
   &-hero {
     &-img {
       border-radius: var(--radius) var(--radius) 0 0;
       display: block;
+      user-select: none;
       width: 100%;
     }
   }
@@ -115,9 +124,16 @@ $white: #fff;
 
     &-link {
       color: var(--bright-blue);
+      cursor: pointer;
       font-weight: 700;
       margin-left: 3rem;
       text-align: right;
+      text-decoration: none;
+      transition: filter var(--transition);
+
+      &:hover {
+        filter: brightness(1.8);
+      }
     }
   }
 
@@ -128,24 +144,61 @@ $white: #fff;
       border: none;
       box-shadow: 0 3px 30px 0 var(--desaturated-blue);
       color: var(--very-pale-blue);
+      cursor: pointer;
       display: block;
       font-size: 0.95rem;
       font-weight: 700;
       margin: 0 auto;
       padding: 0.8rem;
       text-align: center;
+      transition: filter var(--transition);
       width: 280px;
+
+      &:hover {
+        filter: brightness(1.6);
+      }
     }
 
     &-cancel {
       background: none;
       border: none;
       color: var(--desaturated-blue);
+      cursor: pointer;
       display: block;
       font-size: 0.95rem;
       font-weight: 700;
       margin: 1.6rem auto 0;
       outline: none;
+      transition: color var(--transition);
+
+      &:hover {
+        color: var(--dark-blue);
+      }
+    }
+  }
+}
+
+.attribution {
+  margin-top: 2rem;
+  text-align: center;
+
+  p {
+    color: var(--desaturated-blue);
+    font-weight: 700;
+    line-height: 1.7;
+  }
+
+  a {
+    color: var(--bright-blue);
+    font-weight: 900;
+    opacity: 0.8;
+    outline: none;
+    text-decoration: none;
+    transition: opacity var(--transition);
+
+    &:hover {
+      border-bottom: 1px solid var(--bright-blue);
+      opacity: 1;
     }
   }
 }
