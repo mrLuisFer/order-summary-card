@@ -1,5 +1,6 @@
 :root {
   font-size: 16px;
+  /* 500, 700, 900 */
   --font-family: "Red Hat Display", sans-serif;
   /* ### Primary */
   --pale-blue: hsl(225, 100%, 94%);
@@ -25,7 +26,7 @@ body {
   font-family: var(--font-family);
   background: var(--pale-blue);
   margin: 0;
-  padding: 3rem 1rem 0;
+  padding: 2rem 1rem 0;
 }
 $white: #fff;
 
@@ -48,7 +49,7 @@ $white: #fff;
 
     &-title {
       font-size: 1.2rem;
-      font-weight: 700;
+      font-weight: 900;
       color: var(--dark-blue);
       text-align: center;
     }
@@ -65,12 +66,65 @@ $white: #fff;
   }
 
   &-player {
-    display: flex;
+    align-items: center;
     background: var(--very-pale-blue);
-    margin: 0 auto;
-    width: 280px;
     border-radius: var(--radius);
-    padding: 1rem;
+    display: flex;
     font-size: 0.9rem;
+    margin: 1.2rem auto;
+    padding: 0.8rem;
+    width: 280px;
+
+    &-icon {
+      margin-right: 1rem;
+    }
+
+    &-content {
+      &-text {
+        color: var(--dark-blue);
+        font-weight: 700;
+        line-height: 1.8;
+      }
+
+      &-price {
+        color: var(--desaturated-blue);
+        font-weight: 500;
+      }
+    }
+
+    &-link {
+      color: var(--bright-blue);
+      font-weight: 700;
+      margin-left: 3rem;
+      text-align: right;
+    }
+  }
+
+  &-btn {
+    &-pay {
+      background: var(--bright-blue);
+      border-radius: var(--radius);
+      border: none;
+      box-shadow: 0 3px 30px 0 var(--desaturated-blue);
+      color: var(--very-pale-blue);
+      display: block;
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin: 0 auto;
+      padding: 0.8rem;
+      text-align: center;
+      width: 280px;
+    }
+
+    &-cancel {
+      background: none;
+      border: none;
+      color: var(--desaturated-blue);
+      display: block;
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin: 1.6rem auto 0;
+      outline: none;
+    }
   }
 }

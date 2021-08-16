@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      href="./images/favicon-32x32.png"
+      href="./public/images/favicon-32x32.png"
       rel="icon"
       sizes="32x32"
       type="image/png"
@@ -17,7 +17,7 @@
       href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/public/css/index.min.css" />
+    <link rel="stylesheet" href="./public/css/index.min.css" />
   </head>
   <body>
     <main>
@@ -26,7 +26,7 @@
           <img
             alt="dance"
             class="card-hero-img"
-            src="/public/images/illustration-hero.svg"
+            src="./public/images/illustration-hero.svg"
           />
         </section>
         <section class="card-content">
@@ -38,17 +38,17 @@
           <div class="card-player">
             <img
               class="card-player-icon"
-              src="/public/images/icon-music.svg"
+              src="./public/images/icon-music.svg"
               alt="music"
             />
             <div class="card-player-content">
-              <p class="card-player-text">Annual Plan</p>
-              <span class="card-player-price">$59.99/year</span>
+              <p class="card-player-content-text">Annual Plan</p>
+              <span class="card-player-content-price">$59.99/year</span>
             </div>
             <a href="/" class="card-player-link">Change</a>
           </div>
-          <button type="button">Proceed to Payment</button>
-          <button type="button">Cancel Order</button>
+          <button type="button" class="card-btn-pay">Proceed to Payment</button>
+          <button type="button" class="card-btn-cancel">Cancel Order</button>
         </section>
       </div>
       <footer class="attribution">
